@@ -1,0 +1,17 @@
+{
+  "Rules": [
+    {
+      "Id": "DeleteOldFiles",
+      "Status": "Enabled",
+      "Filter": {
+        "Prefix": ""
+      },
+      "Expiration": {
+        "Days": 1
+      },
+      "NoncurrentVersionExpiration": {
+        "NoncurrentDays": 1
+      }
+    }
+  ]
+}
