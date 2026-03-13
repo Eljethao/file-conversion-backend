@@ -103,7 +103,7 @@ def start_conversion(request: ConversionRequest, background_tasks: BackgroundTas
 
         task_id = str(uuid.uuid4())
         base_filename = request.filename.rsplit('.', 1)[0] if '.' in request.filename else request.filename
-        docx_key = f"converted/{task_id}_{base_filename}.docx"
+        docx_key = f"converted/{base_filename}_convert.docx"
 
         redis_client.setex(
             f"task:{task_id}",
